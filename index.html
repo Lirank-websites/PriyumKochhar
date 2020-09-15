@@ -11,6 +11,20 @@
         />
         <link rel="stylesheet" href="css/main.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <script>
+            function currentLink(color, target) {
+                console.log(color, target);
+
+                document.getElementById(
+                    String(target)
+                ).style.backgroundImage = color;
+
+                document.getElementById(
+                    String(target)
+                ).style.backgroundImage = color;
+            }
+        </script>
     </head>
     <body>
         <div class="left-float-section">
@@ -96,22 +110,26 @@
         <div class="floating-menu">
             <ul>
                 <a href="#header">
-                    <li>WELCOME</li>
+                    <li id="welcome-link">WELCOME</li>
                 </a>
                 <a href="#about">
-                    <li>ABOUT ME</li>
+                    <li id="about-link">ABOUT ME</li>
                 </a>
                 <a href="#portfolio">
-                    <li>PORTFOLIO</li>
+                    <li id="portfolio-link">PORTFOLIO</li>
                 </a>
                 <a href="#contact">
-                    <li>CONTACT ME</li>
+                    <li id="contact-link">CONTACT ME</li>
                 </a>
             </ul>
         </div>
 
         <div class="full-body">
-            <header id="header">
+            <header
+                id="header"
+                onmouseover="currentLink('linear-gradient(270deg, #fff, rgba(163,160,159,0))', 'welcome-link') "
+                onmouseout="currentLink('linear-gradient(270deg, #e2e8ef, rgba(163,160,159,0))', 'welcome-link')  "
+            >
                 <div data-aos="zoom-out-down" class="container">
                     <div class="big-text tracking-in-contract-bck">
                         <h1>Priyum</h1>
@@ -140,7 +158,12 @@
             <div id="particles-js"></div>
             <div class="overlay"></div>
 
-            <div class="container" id="about">
+            <div
+                class="container"
+                id="about"
+                onmouseover="currentLink('linear-gradient(270deg, #fff, rgba(163,160,159,0))', 'about-link') "
+                onmouseout="currentLink('linear-gradient(270deg, #e2e8ef, rgba(163,160,159,0))', 'about-link')  "
+            >
                 <div class="about">
                     <div class="about-me-text">
                         <h2 data-aos="fade-up-right">About me</h2>
@@ -190,7 +213,11 @@
                 </div>
             </div>
 
-            <section id="portfolio">
+            <section
+                id="portfolio"
+                onmouseover="currentLink('linear-gradient(270deg, #fff, rgba(163,160,159,0))', 'portfolio-link') "
+                onmouseout="currentLink('linear-gradient(270deg, #e2e8ef, rgba(163,160,159,0))', 'portfolio-link')  "
+            >
                 <div class="container project-card-grid">
                     <div data-aos="zoom-out-up">
                         <a
@@ -279,7 +306,11 @@
                     </div>
                 </div>
             </section>
-            <footer id="contact">
+            <footer
+                id="contact"
+                onmouseover="currentLink('linear-gradient(270deg, #fff, rgba(163,160,159,0))', 'contact-link') "
+                onmouseout="currentLink('linear-gradient(270deg, #e2e8ef, rgba(163,160,159,0))', 'contact-link')  "
+            >
                 <div class="flex">
                     <div class="container">
                         <div data-aos="zoom-in-up">
